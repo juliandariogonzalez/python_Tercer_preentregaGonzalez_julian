@@ -1,0 +1,27 @@
+{% extends "appCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %} SUCURSALES {% endblock %}
+
+{% block contenido_que_cambia %}
+
+    <h1 style="text-align: center; color: rgb(246, 142, 44);">Sucursales</h1>
+    
+    <!-- FORMULARIO PARA CARGAR LOS DATOS -->
+    <form action="{% url 'sucursales' %}" method="POST" style="text-align: center; justify-content: center;" > {% csrf_token %}
+        
+        <table style="margin:0 auto;" >
+        
+            {{ formulario.as_table }}
+        
+        </table>
+        
+        <input type="submit" value="Guardar info">
+        
+    </form>
+
+    <h4 style="text-align: center;">{{ mensaje }}</h4>
+
+
+{% endblock %}

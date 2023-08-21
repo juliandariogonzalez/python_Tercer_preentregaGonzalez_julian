@@ -1,0 +1,29 @@
+{% extends "appCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %} Resultado de Busqueda {% endblock %}
+
+{% block contenido_que_cambia %}
+    
+    <h1 style="text-align: center; color: rgb(246, 142, 44);">Resultado de busqueda</h1>
+
+    <!-- FORMULARIO PARA CARGAR LOS DATOS -->
+    {% if productos %}
+    
+        <h1>Resultado:</h1>
+
+        {% for producto in productos %}
+
+            <h3>{{ producto.nombre }} - {{ producto.tipo_producto }} - {{ producto.numero_producto }} </h3>
+        
+        {% endfor %}
+        
+    {% else %}
+
+        <h1>NO SE ENCONTRARON RESULTADOS</h1>
+
+    {% endif %}
+
+
+{% endblock %}

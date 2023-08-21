@@ -1,0 +1,22 @@
+{% extends "appCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %} Busqueda de productos {% endblock %}
+
+{% block contenido_que_cambia %}
+    <h1 style="text-align: center; color: rgb(246, 142, 44);">Buscar Producto</h1>
+   
+    <!-- FORMULARIO PARA BUSCAR LOS DATOS -->
+    <form action="{% url 'buscar' %}" method="GET" style="text-align: center; justify-content: center;"> {% csrf_token %}
+   
+        <input type="text" name="producto" id="producto" placeholder="ingrese el producto que desea buscar">
+
+        <input type="submit" value="buscar producto">
+
+    </form>
+
+    <h4 style="text-align: center;">{{ mensaje }}</h4>
+
+
+{% endblock %}
