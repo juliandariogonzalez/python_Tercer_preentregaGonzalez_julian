@@ -14,10 +14,9 @@ para realizar la carga en una base de datos.
 
 --→ Para cargar datos en BD tambien se puede realizar por python shell.
 
---→ Para ver la Base de datos a traves de ADMIN:
+--→ Para ver la Base de datos a traves de ADMIN: usuario y contraseña, en el link de entrega.
 entrar a "127.0.0.1:8000/admin/appCoder/" 
 
-usuario: usuario
-pass: usuario1
+
 
 En la base de datos desde admin, se pueden checkear los datos cargados. Los datos puede modificarse o eliminarse.
